@@ -1,19 +1,24 @@
 "use strict";
+// Basic Types
 let id = 5;
 let company = "TSC";
 let isPublished = true;
 let x = "Hello";
 let ids = [1, 2, 3, 4, 5];
 let array = [1, true, "string"];
+// Tuple
 let person = [1, "Ryan", true];
+// Tuple Array
 let employee;
 employee = [
     [1, "Ryan"],
     [2, "Roach"],
     [3, "Levi"],
 ];
-let p_id;
+// Union
+let p_id; // using | means that type can be string OR number
 p_id = 22;
+// Enum
 var Direction1;
 (function (Direction1) {
     Direction1[Direction1["Up"] = 0] = "Up";
@@ -32,10 +37,13 @@ const user = {
     id: 1,
     name: "John",
 };
+// Type Assertion
 let c_id = 1;
 let customerId1 = c_id;
 let customerId2 = c_id;
+// Functions
 const addNum = (x, y) => x + y;
+// Void
 const log = (message) => console.log(message);
 const user1 = {
     id: 1,
@@ -55,6 +63,7 @@ class Person {
     }
 }
 const ryan = new Person(1, "Ryan McCoy");
+// Subclasses
 class Employee extends Person {
     position;
     constructor(id, name, position) {
@@ -63,9 +72,8 @@ class Employee extends Person {
     }
 }
 const emp = new Employee(3, "Roach", "Developer");
-function getArray(items) {
-    return new Array().concat(items);
-}
+// Generics
+const getArray = (items) => new Array().concat(items);
 let numArray = getArray([1, 2, 3, 4]);
 let strArray = getArray(["John", "Ryan", "Roach"]);
 numArray.push(1);
