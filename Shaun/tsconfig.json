@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "outDir": "./public",
+    "rootDir": "./src",
+    "watch": true
+  },
+  "include": ["src"]
+}
