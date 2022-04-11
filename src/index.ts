@@ -4,7 +4,7 @@ let company: string = "TSC";
 let isPublished: boolean = true;
 let x: any = "Hello";
 let ids: number[] = [1, 2, 3, 4, 5];
-let array: any[] = [1, true, "string"];
+let arr: any[] = [1, true, "string"];
 
 // Tuple
 let person: [number, string, boolean] = [1, "Ryan", true];
@@ -36,7 +36,10 @@ enum Direction2 {
 }
 
 // Objects
-type User = { id: number; name: string };
+type User = {
+  id: number;
+  name: string;
+};
 const user: User = {
   id: 1,
   name: "John",
@@ -57,7 +60,7 @@ const log = (message: string | number): void => console.log(message);
 interface UserInterface {
   readonly id: number;
   name: string;
-  age?: number; // ? make property optional
+  age?: number; // ? makes the property optional
 }
 const user1: UserInterface = {
   id: 1,
@@ -68,7 +71,7 @@ interface MathFunc {
   (x: number, y: number): number;
 }
 const add: MathFunc = (x: number, y: number): number => x + y;
-const subtract: MathFunc = (x: number, y: number): number => x - y;
+const sub: MathFunc = (x: number, y: number): number => x - y;
 
 // Classes
 interface PersonInterface {
@@ -77,7 +80,7 @@ interface PersonInterface {
   register(): string;
 }
 class Person implements PersonInterface {
-  id: number;
+  public id: number; // public (accessible without any conditions), private (only accessible within the class) or protected (only accessible within the class and its subclasses)
   name: string;
 
   constructor(id: number, name: string) {
@@ -100,7 +103,7 @@ class Employee extends Person {
     this.position = position;
   }
 }
-const emp = new Employee(3, "Roach", "Developer");
+const emp = new Employee(1, "Roach", "Developer");
 
 // Generics
 const getArray = <T>(items: T[]): T[] => new Array().concat(items);

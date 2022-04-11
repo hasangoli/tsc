@@ -5,7 +5,7 @@ let company = "TSC";
 let isPublished = true;
 let x = "Hello";
 let ids = [1, 2, 3, 4, 5];
-let array = [1, true, "string"];
+let arr = [1, true, "string"];
 // Tuple
 let person = [1, "Ryan", true];
 // Tuple Array
@@ -50,9 +50,9 @@ const user1 = {
     name: "John",
 };
 const add = (x, y) => x + y;
-const subtract = (x, y) => x - y;
+const sub = (x, y) => x - y;
 class Person {
-    id;
+    id; // public (accessible without any conditions), private (only accessible within the class) or protected (only accessible within the class and its subclasses)
     name;
     constructor(id, name) {
         this.id = id;
@@ -71,7 +71,7 @@ class Employee extends Person {
         this.position = position;
     }
 }
-const emp = new Employee(3, "Roach", "Developer");
+const emp = new Employee(1, "Roach", "Developer");
 // Generics
 const getArray = (items) => new Array().concat(items);
 let numArray = getArray([1, 2, 3, 4]);
